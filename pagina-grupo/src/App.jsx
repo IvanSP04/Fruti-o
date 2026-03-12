@@ -1,13 +1,11 @@
-import Hero from "./Componentes/Hero";
+import Navbar from "./Componentes/Navbar";
 
 function App() {
-
   return (
     <>
-      <Hero/>
+      <Navbar />
     </>
   );
-
 }
 
 export default App;
