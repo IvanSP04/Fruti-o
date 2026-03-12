@@ -1,13 +1,11 @@
-import Hero from "./Componentes/Hero";
+import StarbucksRewards from "./Componentes/Rewards";
 
 function App() {
-
   return (
-    <>
-      <Hero/>
-    </>
+    <div>
+      <StarbucksRewards />
+    </div>
   );
-
 }
 
 export default App;
