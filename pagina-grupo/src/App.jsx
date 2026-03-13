@@ -6,6 +6,10 @@ import Cafe from "./Componentes/cafe";
 import Novedades from "./Componentes/Novedades";
 import Rewards from "./Componentes/Rewards";
 import Footer from "./Componentes/Footer";
+import AboutStarbucks from "./Componentes/AboutStarbucks";
+import Buscartienda from "./Componentes/Buscartienda";
+import FacturaElectronica from "./Componentes/FacturaElectronica";
+import Sugerenciasreclamos from "./Componentes/Sugerenciasreclamos";
 
 function App() {
   return (
@@ -17,6 +21,10 @@ function App() {
         <Route path="/cafe" element={<Cafe />} />
         <Route path="/novedades" element={<Novedades />} />
         <Route path="/rewards" element={<Rewards />} />
+        <Route path="/nosotros" element={<AboutStarbucks />} />
+        <Route path="/buscar-tienda" element={<Buscartienda />} />
+        <Route path="/factura" element={<FacturaElectronica />} />
+        <Route path="/sugerencias" element={<Sugerenciasreclamos />} />
       </Routes>
       <Footer />
     </Router>

@@ -35,7 +35,7 @@ const Footer = () => {
                 <span className={`footer__arrow ${open === 'sobre' ? 'footer__arrow--open' : ''}`}>+</span>
               </h3>
               <ul className={`footer__links ${open === 'sobre' ? 'footer__links--show' : ''}`}>
-                <li><a href="https://www.starbucks.com.co/seccion/nosotros">Acerca de Starbucks</a></li>
+                <li><a href="/nosotros">Acerca de Starbucks</a></li>
                 <li><a href="https://www.starbucks.com.co/seccion/trabaja-con-nosotros">Trabaja con nosotros</a></li>
                 <li><a href="https://www.starbucks.com.co/seccion/novedades">Historias y noticias Starbucks</a></li>
                 <li><a href="/notmilk" className="footer__link--underline">Sobre NotMilk</a></li>
@@ -50,8 +50,8 @@ const Footer = () => {
                 <span className={`footer__arrow ${open === 'atencion' ? 'footer__arrow--open' : ''}`}>+</span>
               </h3>
               <ul className={`footer__links ${open === 'atencion' ? 'footer__links--show' : ''}`}>
-                <li><a href="https://www.starbucks.com.co/seccion/sugerencias-y-reclamos">Sugerencias y reclamos</a></li>
-                <li><a href="https://www.starbucks.com.co/seccion/factura-electronica">Factura Electrónica</a></li>
+                <li><a href="/sugerencias">Sugerencias y reclamos</a></li>
+                <li><a href="/factura">Factura Electrónica</a></li>
               </ul>
             </div>
 

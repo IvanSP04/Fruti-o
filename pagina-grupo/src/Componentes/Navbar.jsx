@@ -15,6 +15,7 @@ function Navbar() {
     { id: 2, nombre: "CAFE", href: "/cafe" },
     { id: 3, nombre: "NOVEDADES", href: "/novedades" },
     { id: 4, nombre: "REWARDS", href: "/rewards" },
+    { id: 5, nombre: "NOSOTROS", href: "/nosotros" },
   ];
 
   function handleNavClick(e, link) {
@@ -26,7 +27,7 @@ function Navbar() {
 
   function handleBuscarTienda(e) {
     e.preventDefault();
-    window.location.href = "/";
+    window.location.href = "/buscar-tienda";
   }
 
   function toggleMenu() {
@@ -36,9 +37,9 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <div 
-          className="navbar-logo" 
-          style={{ cursor: "pointer" }} 
+        <div
+          className="navbar-logo"
+          style={{ cursor: "pointer" }}
           onClick={() => window.location.href = "/"}
         >
           <img src={navInfo.logo} alt={navInfo.marca} />
@@ -74,7 +75,7 @@ function Navbar() {
         <div className={"navbar-acciones " + (menuAbierto ? "abierto" : "")}>
           {/* ✅ CORRECCIÓN 2: Agregada etiqueta <a> */}
           <a
-            href="/"
+            href="/buscar-tienda"
             className="navbar-tienda"
             onClick={handleBuscarTienda}
           >
