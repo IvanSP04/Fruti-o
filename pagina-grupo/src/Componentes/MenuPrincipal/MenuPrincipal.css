@@ -3,14 +3,13 @@
   background: #f2f0eb;
 }
 
-/* BANNER LAVANDA */
 .banner {
-  width: 70%;
+  width: 56%;
   margin: 24px auto;
   display: flex;
   border-radius: 12px;
   overflow: hidden;
-  min-height: 300px;
+  height: 320px;
 }
 
 .banner-left {
@@ -21,11 +20,12 @@
   flex-direction: column;
   justify-content: center;
   gap: 24px;
-  width: 40%;
+  width: 42%;
+  flex-shrink: 0;
 }
 
 .banner-left h2 {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 800;
   line-height: 1.2;
 }
@@ -36,11 +36,10 @@
   border: none;
   padding: 12px 24px;
   border-radius: 50px;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   width: fit-content;
-  transition: background 0.2s;
 }
 
 .banner-btn:hover {
@@ -49,19 +48,27 @@
 
 .banner-right {
   position: relative;
-  width: 60%;
-  min-height: 300px;
-  background-image: url("https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=800");
-  background-size: cover;
-  background-position: center;
+  width: 58%;
+  height: 320px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .banner-imagen-container {
-  width: 100%;
-  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
 .etiqueta {
@@ -70,30 +77,33 @@
   color: white;
   font-size: 11px;
   font-weight: 600;
-  padding: 6px 12px;
+  padding: 6px 10px;
   border-radius: 20px;
   cursor: pointer;
   transform: translate(-50%, -50%);
   white-space: nowrap;
-  transition: background 0.2s, transform 0.2s;
   z-index: 2;
+  pointer-events: all;
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: background 0.2s;
+  text-align: center;
+  max-width: 100px;
+  white-space: normal;
+  line-height: 1.2;
 }
 
 .etiqueta.activo {
   background: #1e3932;
-  transform: translate(-50%, -50%) scale(1.1);
 }
 
-/* REWARDS */
 .rewards-section {
-  padding: 60px 15%;
+  padding: 60px 10%;
   text-align: center;
   background: #ffffff;
 }
 
 .rewards-titulo {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
   margin-bottom: 40px;
   color: #1e1e1e;
@@ -102,30 +112,32 @@
 .rewards-grid {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 60px;
   margin-bottom: 40px;
 }
 
 .reward-item {
-  max-width: 250px;
+  max-width: 220px;
   text-align: left;
 }
 
 .reward-icono {
-  font-size: 40px;
-  display: block;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
   margin-bottom: 12px;
+  display: block;
 }
 
 .reward-item h3 {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   margin-bottom: 8px;
   color: #1e1e1e;
 }
 
 .reward-item p {
-  font-size: 14px;
+  font-size: 13px;
   color: #555;
 }
 
@@ -135,17 +147,15 @@
   gap: 16px;
 }
 
-/* BOTONES */
 .btn-verde {
   background: #00704a;
   color: white;
   border: none;
-  padding: 12px 24px;
+  padding: 12px 28px;
   border-radius: 50px;
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s;
 }
 
 .btn-verde:hover {
@@ -156,12 +166,11 @@
   background: transparent;
   color: #1e1e1e;
   border: 1.5px solid #1e1e1e;
-  padding: 12px 24px;
+  padding: 12px 28px;
   border-radius: 50px;
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
-  transition: border-color 0.2s, color 0.2s;
 }
 
 .btn-outline:hover {
@@ -169,12 +178,11 @@
   color: #00704a;
 }
 
-/* CARDS GRID */
 .cards-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
-  padding: 24px 15%;
+  padding: 24px 14%;
   background: #f2f0eb;
 }
 
@@ -185,8 +193,11 @@
 }
 
 .card-imagen {
-  height: 200px;
   width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
 }
 
 .card-contenido {
@@ -194,40 +205,37 @@
 }
 
 .card-contenido h3 {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 700;
   margin-bottom: 8px;
   color: #1e1e1e;
 }
 
 .card-contenido p {
-  font-size: 14px;
+  font-size: 13px;
   color: #555;
   margin-bottom: 16px;
 }
 
 .btn-card {
-  background: transparent;
-  color: #00704a;
-  border: 1.5px solid #00704a;
-  padding: 10px 20px;
+  background: #00704a;
+  color: white;
+  border: none;
+  padding: 10px 22px;
   border-radius: 50px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
 }
 
 .btn-card:hover {
-  background: #00704a;
-  color: white;
+  background: #1e3932;
 }
 
-/* HISTORIAS */
 .historias {
   display: flex;
-  width: 40%;
-  margin: 24px 15%;
+  width: 38%;
+  margin: 24px 14%;
   background: #ffffff;
   border-radius: 12px;
   overflow: hidden;
@@ -235,11 +243,10 @@
 }
 
 .historias-imagen {
-  height: 200px;
-  background: #1e3932;
-  background-image: url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600");
-  background-size: cover;
-  background-position: center;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
 }
 
 .historias-contenido {
@@ -247,19 +254,19 @@
 }
 
 .historias-contenido h3 {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 700;
   margin-bottom: 16px;
   color: #1e1e1e;
 }
 
-/* BUSCAR TIENDA */
 .buscar-tienda {
   display: flex;
-  margin: 24px 15%;
+  margin: 24px 14%;
   border-radius: 12px;
   overflow: hidden;
-  min-height: 300px;
+  height: 320px;
+  margin-bottom: 40px;
 }
 
 .tienda-left {
@@ -270,19 +277,20 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex-shrink: 0;
 }
 
 .tienda-left h3 {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .tienda-left p {
-  font-size: 14px;
+  font-size: 13px;
   opacity: 0.9;
-  margin-bottom: 24px;
   flex: 1;
+  margin-bottom: 20px;
 }
 
 .btn-outline-dark {
@@ -295,7 +303,6 @@
   font-weight: 600;
   cursor: pointer;
   width: fit-content;
-  transition: background 0.2s;
 }
 
 .btn-outline-dark:hover {
@@ -304,56 +311,56 @@
 
 .tienda-mapa {
   width: 65%;
-  min-height: 300px;
+  height: 320px;
 }
 
-/* RESPONSIVE */
+.tienda-mapa iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
 @media (max-width: 768px) {
   .banner {
     flex-direction: column;
     width: 95%;
+    height: auto;
   }
-
   .banner-left {
     width: 100%;
     padding: 32px 24px;
   }
-
   .banner-right {
     width: 100%;
-    min-height: 220px;
+    height: 220px;
   }
-
   .rewards-section {
     padding: 40px 5%;
   }
-
   .rewards-grid {
     flex-direction: column;
     align-items: center;
+    gap: 30px;
   }
-
   .cards-grid {
     grid-template-columns: 1fr;
     padding: 16px 5%;
   }
-
   .historias {
     width: 90%;
     margin: 16px auto;
   }
-
   .buscar-tienda {
     flex-direction: column;
     margin: 16px 5%;
+    height: auto;
   }
-
   .tienda-left {
     width: 100%;
   }
-
   .tienda-mapa {
     width: 100%;
-    min-height: 250px;
+    height: 250px;
   }
 }

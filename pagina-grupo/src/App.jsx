@@ -1,6 +1,5 @@
-
-import Navbar from "./Componentes/Navbar";
-import MenuPrincipal from "./Componentes/MenuPrincipal";
+import Navbar from "./Componentes/Navbar/Navbar";
+import MenuPrincipal from "./Componentes/MenuPrincipal/MenuPrincipal";
 
 function App() {
   return (
